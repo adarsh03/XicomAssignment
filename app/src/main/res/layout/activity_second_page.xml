@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="secondViewModel"
+            type="com.example.xicomassignment.viewModel.MainViewModel" />
+    </data>
+ <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondPage">
+
+     <androidx.core.widget.NestedScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/project_image_icon"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="15sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={secondViewModel.first_name}"
+                android:padding="15sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/textview_roundborder"
+                android:hint="First Name"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={secondViewModel.last_name}"
+                android:padding="15sp"
+                android:layout_margin="15sp"
+                android:background="@drawable/textview_roundborder"
+                android:hint="Last Name"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={secondViewModel.email}"
+                android:padding="15sp"
+                android:layout_margin="15sp"
+                android:background="@drawable/textview_roundborder"
+                android:hint="Email"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={secondViewModel.phone}"
+                android:padding="15sp"
+                android:layout_margin="15sp"
+                android:background="@drawable/textview_roundborder"
+                android:hint="Phone"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="80sp"
+                android:layout_marginTop="20sp"
+                android:paddingStart="40sp"
+                android:paddingEnd="40sp"
+                android:background="@drawable/textview_roundborder"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccent"/>
+
+        </LinearLayout>
+     </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
